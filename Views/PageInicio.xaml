@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea_1._3_Aplicacion_de_Autores.Views.PageInicio"
+             Title="Biblioteca UTH Autores de Libros">
+    <ScrollView>
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+        <Image Source="loguito.png" Aspect="AspectFit" WidthRequest="200" HeightRequest="200" />
+
+        <Label x:Name="textNombre" Text="Nombre del Autor:"/>
+        <Entry x:Name="nombres" Placeholder="Ingrese Nombres" Keyboard="Text"/>
+
+        <Label x:Name="textPais" Text="Nacionalidad del Autor:"/>
+        <Picker x:Name="Pais" Title="Selecciona un Pais">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Honduras</x:String>
+                    <x:String>Guatemala</x:String>
+                    <x:String>Costa Rica</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button x:Name="btnguardar" Text="Guardar" Clicked="Button_Clicked" />
+        <Button x:Name="btnverlista" Text="Ver Lista" Clicked="btnverlista_Clicked"/>
+
+
+        </VerticalStackLayout>
+    
+</ScrollView>
+</ContentPage>
